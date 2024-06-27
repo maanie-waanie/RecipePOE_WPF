@@ -58,4 +58,4 @@ Once the window pops up press any of the buttons on the left and whatever you ch
 
 Link to the Part 1& 2 GitHub respository: https://github.com/maanie-waanie/Recipe_POE_ST10290748.git
 
-Link to the Part 3 WPF application GitHub Repostitory: https://github.com/maanie-waanie/RecipePOE_WPF.git
+Link to the Part 3 WPF application GitHub Repostitory: [https://github.com/maanie-waanie/RecipePOE_WPF.git](https://github.com/maanie-waanie/RecipePOE_WPF_ST10290748.git)
