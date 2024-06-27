@@ -28,6 +28,10 @@ Program Class-
 
 The Program class contains the main entry point for the application. That includes the Main Method creates a new Recipe object and allows the user to interact with it through a menu. Displays a menu of options to the user. Allows the user to display all recipes, display a specific recipe, enter a new recipe, scale a recipe, reset quantities of a recipe, or exit the application. Prompts the user for input and performs actions based on the user's choice
 
+Calorie Definition- A calorie is a unit of energy. In nutrition, calories refer to the energy people get from the food and drink they consume, and the energy they use in physical activity. Calories are listed in the nutritional information on all food packaging. Many weight loss programs center around reducing the intake of calories. As a guide: an average man needs 2,500kcal a day  and an average woman needs 2,000kcal a day.
+
+Food Group Defintion- Any of a number of categories into which types of food are classified in various nutritional schemes.(Fruits, Vegetables, Grains, Protein Foods, and Dairy, etc.)
+
 Part 3- How to Use RecipePOE_WPF:
 
 Download the zip file.
