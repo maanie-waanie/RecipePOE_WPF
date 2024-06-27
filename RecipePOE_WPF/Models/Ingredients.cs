@@ -23,6 +23,7 @@ namespace Recipe_POE
         public int Calories { get; set; }
         public string FoodGroup { get; set; }
 
+        //--------------------------------------------------------------------------------------------------------------------------------------//
         public Ingredient(string name, float quantities, string measurements, int calories, string foodGroup)
         {
             Name = name;

@@ -29,7 +29,8 @@ namespace RecipePOE_WPF
             InitializeComponent();
         }
 
-        // AddRecipeButton click event
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //AddRecipeButton click event
         private void ButtonAddRecipe_Click(object sender, RoutedEventArgs e)
         {
             DisplayPanel.Children.Clear();
@@ -51,6 +52,7 @@ namespace RecipePOE_WPF
             DisplayPanel.Children.Add(addButton);
         }
 
+        //-------------------------------------------------------------------------------------------------------------------------------------//
         // Method to add ingredients and steps
         private void AddIngredientsAndSteps(TextBox nameTextBox, TextBox ingredientNoTextBox)
         {
@@ -99,8 +101,8 @@ namespace RecipePOE_WPF
                 DisplayPanel.Children.Add(stepsButton);
             }
         }
-
-        // Method to add steps
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //Method to add steps
         private void AddSteps(TextBox stepNoTextBox, int ingredientNo)
         {
             DisplayPanel.Children.Clear();
@@ -123,7 +125,8 @@ namespace RecipePOE_WPF
             }
         }
 
-        // Method to save the recipe
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //Method to save the recipe
         private void SaveRecipe(int ingredientNo, int stepsNo)
         {
             foreach (var child in DisplayPanel.Children)
@@ -156,7 +159,8 @@ namespace RecipePOE_WPF
             DisplayPanel.Children.Add(successLabel);
         }
 
-        // DisplayRecipeButton click event
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //DisplayRecipeButton click event
         private void ButtonDisplayRecipe_Click(object sender, RoutedEventArgs e)
         {
             DisplayPanel.Children.Clear();
@@ -171,8 +175,8 @@ namespace RecipePOE_WPF
             DisplayPanel.Children.Add(nameTextBox);
             DisplayPanel.Children.Add(displayButton);
         }
-
-        // Method to display the recipe
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //Method to display the recipe
         private void DisplayRecipe(object sender, RoutedEventArgs e)
         {
             var recipeName = DisplayPanel.Children.OfType<TextBox>().FirstOrDefault(tb => tb.Name == "RecipeDisplayName")?.Text;
@@ -204,7 +208,7 @@ namespace RecipePOE_WPF
                 
                 for (int i = 0; i < currentRecipe.Ingredients.Count; i++)
                 {
-                    //var ingredient = currentRecipe.Ingredients[i];
+                    
                     var ingredientDetails = new Label
                     {
                         Content = $" {currentRecipe.Ingredients[i]}: {currentRecipe.Ingredients[i].Quantities} {currentRecipe.Ingredients[i].Measurements}, {currentRecipe.Ingredients[i].Calories} calories, {currentRecipe.Ingredients[i].FoodGroup}",
@@ -261,7 +265,8 @@ namespace RecipePOE_WPF
         }
 
 
-
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //DisplayAllRecipesButton click event
         private void ButtonDisplayAll_Click(object sender, RoutedEventArgs e)
         {
             DisplayPanel.Children.Clear();
@@ -274,7 +279,8 @@ namespace RecipePOE_WPF
             }
         }
 
-
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //ScaleRecipeButton click event
         private void ButtonScaleRecipe_Click(object sender, RoutedEventArgs e)
         {
             DisplayPanel.Children.Clear();
@@ -295,6 +301,8 @@ namespace RecipePOE_WPF
             DisplayPanel.Children.Add(scaleButton);
         }
 
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //Method to Scale a Recipe
         private void ScaleRecipe(object sender, RoutedEventArgs e)
         {
             var recipeName = DisplayPanel.Children.OfType<TextBox>().FirstOrDefault(tb => tb.Name == "RecipeScaleName")?.Text;
@@ -318,6 +326,8 @@ namespace RecipePOE_WPF
             }
         }
 
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //ResetQuantitiesButton click event
         private void ButtonResetQuantities_Click(object sender, RoutedEventArgs e)
         {
             DisplayPanel.Children.Clear();
@@ -332,6 +342,8 @@ namespace RecipePOE_WPF
             DisplayPanel.Children.Add(resetButton);
         }
 
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //Method to Reset Quantities back to the Original ones
         private void resetQuantities(object sender, RoutedEventArgs e)
         {
            
@@ -349,6 +361,10 @@ namespace RecipePOE_WPF
             }
         }
 
+
+
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //FilterRecipesButton click event
         private void ButtonFilter_Click(object sender, RoutedEventArgs e)
         {
             DisplayPanel.Children.Clear();
@@ -363,6 +379,9 @@ namespace RecipePOE_WPF
             DisplayPanel.Children.Add(filterButton);
         }
 
+
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //Method to filter recipes by either ingredients, foodgroups or max calories
         private void FilterRecipes(object sender, RoutedEventArgs e)
         {
             var maxCaloriesText = DisplayPanel.Children.OfType<TextBox>().FirstOrDefault(tb => tb.Name == "MaxCalories")?.Text;
@@ -378,6 +397,9 @@ namespace RecipePOE_WPF
             }
         }
 
+
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //ClearRecipeButton click event
         private void ButtonClearRecipe_Click(object sender, RoutedEventArgs e)
         {
             DisplayPanel.Children.Clear();
@@ -392,6 +414,9 @@ namespace RecipePOE_WPF
             DisplayPanel.Children.Add(clearButton);
         }
 
+
+        //--------------------------------------------------------------------------------------------------------------------------------------//
+        //Method to Clear Recipes
         private void ClearRecipe(object sender, RoutedEventArgs e)
         {
             var recipeName = DisplayPanel.Children.OfType<TextBox>().FirstOrDefault(tb => tb.Name == "RecipeClearName")?.Text;
@@ -411,3 +436,4 @@ namespace RecipePOE_WPF
         }
     }
 }
+//--------------------------------------------------END OF FILE---------------------------------------------------------------------------------//
